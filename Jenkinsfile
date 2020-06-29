@@ -15,8 +15,8 @@
 pipeline {
 	//agent any
 	agent {
-		image {
-			'node:13.8'
+		docker {
+			image 'node:13.8'
 		}
 	}
 	stages {
