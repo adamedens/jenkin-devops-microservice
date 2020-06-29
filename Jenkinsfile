@@ -13,11 +13,17 @@
 
 //Declarative pipeline approach
 pipeline {
-	agent any
+	//agent any
+	agent {
+		image {
+			'node:13.8'
+		}
+	}
 	stages {
 		stage('Build') {
 			steps {
 				//sh 'mvn --version'
+				sh 'node --version'
 				echo "Build"
 			}
 		}
