@@ -17,6 +17,7 @@ pipeline {
 	agent {
 		docker {
 			image 'node:13.8'
+			label 'somelabel'
 		}
 	}
 	stages {
