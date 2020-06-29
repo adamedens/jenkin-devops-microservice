@@ -14,12 +14,7 @@
 //Declarative pipeline approach
 pipeline {
 	//agent any
-	agent {
-		docker {
-			image 'node:13.8'
-			label 'somelabel'
-		}
-	}
+	agent { label 'my_label' docker 'node:13.8'	}
 	stages {
 		stage('Build') {
 			steps {
