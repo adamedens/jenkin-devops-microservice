@@ -58,7 +58,7 @@ pipeline {
 			steps {
 				//"docker build -t adamedens/currency-exchange-devops:$env.BUILD_TAG"
 				script {
-					dockerImage = docker.build("adamedens/currency-exchange-devops:${env.BUILD_TAG}")
+					dockerImage = docker.build("adamedens/currency-exchange-devops:$env.BUILD_TAG")
 				}
 			}
 		}
