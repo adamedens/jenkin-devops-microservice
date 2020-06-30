@@ -70,6 +70,7 @@ pipeline {
 				// 		dockerImage.push('latest')
 				// 	}
 				// }
+				sh "docker login -u='adamedens' -p='u/Vb%+Vgvw8-8!z'"
 				sh "docker push adamedens/currency-exchange-devops:${env.BUILD_TAG}"
 			}
 		}
