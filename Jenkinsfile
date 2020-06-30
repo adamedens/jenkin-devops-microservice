@@ -64,12 +64,13 @@ pipeline {
 		}
 		stage('Push Docker Image') {
 			steps {
-				script {
-					docker.withRegistry('', 'dockerhub') {
-						dockerImage.push();
-						dockerImage.push('latest')
-					}
-				}
+				// script {
+				// 	docker.withRegistry('', 'dockerhub') {
+				// 		dockerImage.push();
+				// 		dockerImage.push('latest')
+				// 	}
+				// }
+				sh "docker push adamedens/currency-exchange-devops:${env.BUILD_TAG}"
 			}
 		}
 	}
